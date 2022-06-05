@@ -1,0 +1,49 @@
+var wms_layers = [];
+
+var format_Allegheny_0 = new ol.format.GeoJSON();
+var features_Allegheny_0 = format_Allegheny_0.readFeatures(json_Allegheny_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_Allegheny_0 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Allegheny_0.addFeatures(features_Allegheny_0);
+var lyr_Allegheny_0 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_Allegheny_0, 
+                style: style_Allegheny_0,
+                interactive: true,
+    title: 'Allegheny<br />\
+    <img src="styles/legend/Allegheny_0_0.png" /> 0 - 0<br />\
+    <img src="styles/legend/Allegheny_0_1.png" /> 0 - 4<br />\
+    <img src="styles/legend/Allegheny_0_2.png" /> 4 - 19.4<br />\
+    <img src="styles/legend/Allegheny_0_3.png" /> 19.4 - 32<br />\
+    <img src="styles/legend/Allegheny_0_4.png" /> 32 - 54<br />\
+    <img src="styles/legend/Allegheny_0_5.png" /> 54 - 85<br />\
+    <img src="styles/legend/Allegheny_0_6.png" /> 85 - 408<br />'
+        });
+var format_place_alleghenycounty_1 = new ol.format.GeoJSON();
+var features_place_alleghenycounty_1 = format_place_alleghenycounty_1.readFeatures(json_place_alleghenycounty_1, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_place_alleghenycounty_1 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_place_alleghenycounty_1.addFeatures(features_place_alleghenycounty_1);
+var lyr_place_alleghenycounty_1 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_place_alleghenycounty_1, 
+                style: style_place_alleghenycounty_1,
+                interactive: true,
+                title: '<img src="styles/legend/place_alleghenycounty_1.png" /> place_allegheny county'
+            });
+
+lyr_Allegheny_0.setVisible(true);lyr_place_alleghenycounty_1.setVisible(true);
+var layersList = [lyr_Allegheny_0,lyr_place_alleghenycounty_1];
+lyr_Allegheny_0.set('fieldAliases', {'STATEFP': 'STATEFP', 'COUNTYFP': 'COUNTYFP', 'TRACTCE': 'TRACTCE', 'GEOID': 'GEOID', 'NAME': 'NAME', 'NAMELSAD': 'NAMELSAD', 'MTFCC': 'MTFCC', 'FUNCSTAT': 'FUNCSTAT', 'ALAND': 'ALAND', 'AWATER': 'AWATER', 'INTPTLAT': 'INTPTLAT', 'INTPTLON': 'INTPTLON', '2010 Hispanic or latino_HispanicsLatinos': '2010 Hispanic or latino_HispanicsLatinos', '2010 Hispanic or latino_Formatted_GEO': '2010 Hispanic or latino_Formatted_GEO', });
+lyr_place_alleghenycounty_1.set('fieldAliases', {'full_id': 'full_id', 'osm_id': 'osm_id', 'osm_type': 'osm_type', 'place': 'place', 'cycleway': 'cycleway', 'surveillance:zone': 'surveillance:zone', 'camera:type': 'camera:type', 'surveillance:type': 'surveillance:type', 'surveillance': 'surveillance', 'man_made': 'man_made', 'camera:mount': 'camera:mount', 'public_transport': 'public_transport', 'operator': 'operator', 'network': 'network', 'bus': 'bus', 'gnis:county_id': 'gnis:county_id', 'ford': 'ford', 'is_in:state': 'is_in:state', 'is_in:county': 'is_in:county', 'is_in:country': 'is_in:country', 'traffic_signals:vibration': 'traffic_signals:vibration', 'button_operated': 'button_operated', 'website': 'website', 'waterway': 'waterway', 'ref:fra_crossing': 'ref:fra_crossing', 'crossing:barrier': 'crossing:barrier', 'crossing_ref': 'crossing_ref', 'noref': 'noref', 'noexit': 'noexit', 'railway': 'railway', 'access:delivery': 'access:delivery', 'motor_vehicle': 'motor_vehicle', 'foot': 'foot', 'bicycle': 'bicycle', 'barrier': 'barrier', 'ref': 'ref', 'old_ref': 'old_ref', 'is_in:municipality': 'is_in:municipality', 'addr:municipality': 'addr:municipality', 'addr:state': 'addr:state', 'addr:postcode': 'addr:postcode', 'addr:city': 'addr:city', 'official_name': 'official_name', 'alt_name': 'alt_name', 'source:old_name': 'source:old_name', 'old_name': 'old_name', 'gnis:feature_id': 'gnis:feature_id', 'is_in': 'is_in', 'import_uuid': 'import_uuid', 'gnis:id': 'gnis:id', 'gnis:ST_num': 'gnis:ST_num', 'gnis:ST_alpha': 'gnis:ST_alpha', 'gnis:County_num': 'gnis:County_num', 'gnis:County': 'gnis:County', 'gnis:Class': 'gnis:Class', 'ele': 'ele', 'census:population': 'census:population', 'direction': 'direction', 'traffic_signals:sound': 'traffic_signals:sound', 'traffic_signals': 'traffic_signals', 'tactile_paving': 'tactile_paving', 'crossing:island': 'crossing:island', 'odbl': 'odbl', 'traffic_signals:direction': 'traffic_signals:direction', 'crossing': 'crossing', 'highway': 'highway', 'wikipedia': 'wikipedia', 'wikidata': 'wikidata', 'source:name:oc': 'source:name:oc', 'short_name': 'short_name', 'population': 'population', 'name:ru': 'name:ru', 'name:pdc': 'name:pdc', 'name:oc': 'name:oc', 'name:he': 'name:he', 'name:en': 'name:en', 'name': 'name', });
+lyr_Allegheny_0.set('fieldImages', {'STATEFP': 'TextEdit', 'COUNTYFP': 'TextEdit', 'TRACTCE': 'TextEdit', 'GEOID': 'TextEdit', 'NAME': 'TextEdit', 'NAMELSAD': 'TextEdit', 'MTFCC': 'TextEdit', 'FUNCSTAT': 'TextEdit', 'ALAND': 'TextEdit', 'AWATER': 'TextEdit', 'INTPTLAT': 'TextEdit', 'INTPTLON': 'TextEdit', '2010 Hispanic or latino_HispanicsLatinos': 'Range', '2010 Hispanic or latino_Formatted_GEO': 'TextEdit', });
+lyr_place_alleghenycounty_1.set('fieldImages', {'full_id': 'TextEdit', 'osm_id': 'TextEdit', 'osm_type': 'TextEdit', 'place': 'TextEdit', 'cycleway': 'TextEdit', 'surveillance:zone': 'TextEdit', 'camera:type': 'TextEdit', 'surveillance:type': 'TextEdit', 'surveillance': 'TextEdit', 'man_made': 'TextEdit', 'camera:mount': 'TextEdit', 'public_transport': 'TextEdit', 'operator': 'TextEdit', 'network': 'TextEdit', 'bus': 'TextEdit', 'gnis:county_id': 'TextEdit', 'ford': 'TextEdit', 'is_in:state': 'TextEdit', 'is_in:county': 'TextEdit', 'is_in:country': 'TextEdit', 'traffic_signals:vibration': 'TextEdit', 'button_operated': 'TextEdit', 'website': 'TextEdit', 'waterway': 'TextEdit', 'ref:fra_crossing': 'TextEdit', 'crossing:barrier': 'TextEdit', 'crossing_ref': 'TextEdit', 'noref': 'TextEdit', 'noexit': 'TextEdit', 'railway': 'TextEdit', 'access:delivery': 'TextEdit', 'motor_vehicle': 'TextEdit', 'foot': 'TextEdit', 'bicycle': 'TextEdit', 'barrier': 'TextEdit', 'ref': 'TextEdit', 'old_ref': 'TextEdit', 'is_in:municipality': 'TextEdit', 'addr:municipality': 'TextEdit', 'addr:state': 'TextEdit', 'addr:postcode': 'TextEdit', 'addr:city': 'TextEdit', 'official_name': 'TextEdit', 'alt_name': 'TextEdit', 'source:old_name': 'TextEdit', 'old_name': 'TextEdit', 'gnis:feature_id': 'TextEdit', 'is_in': 'TextEdit', 'import_uuid': 'TextEdit', 'gnis:id': 'TextEdit', 'gnis:ST_num': 'TextEdit', 'gnis:ST_alpha': 'TextEdit', 'gnis:County_num': 'TextEdit', 'gnis:County': 'TextEdit', 'gnis:Class': 'TextEdit', 'ele': 'TextEdit', 'census:population': 'TextEdit', 'direction': 'TextEdit', 'traffic_signals:sound': 'TextEdit', 'traffic_signals': 'TextEdit', 'tactile_paving': 'TextEdit', 'crossing:island': 'TextEdit', 'odbl': 'TextEdit', 'traffic_signals:direction': 'TextEdit', 'crossing': 'TextEdit', 'highway': 'TextEdit', 'wikipedia': 'TextEdit', 'wikidata': 'TextEdit', 'source:name:oc': 'TextEdit', 'short_name': 'TextEdit', 'population': 'TextEdit', 'name:ru': 'TextEdit', 'name:pdc': 'TextEdit', 'name:oc': 'TextEdit', 'name:he': 'TextEdit', 'name:en': 'TextEdit', 'name': 'TextEdit', });
+lyr_Allegheny_0.set('fieldLabels', {'STATEFP': 'no label', 'COUNTYFP': 'no label', 'TRACTCE': 'no label', 'GEOID': 'no label', 'NAME': 'no label', 'NAMELSAD': 'no label', 'MTFCC': 'no label', 'FUNCSTAT': 'no label', 'ALAND': 'no label', 'AWATER': 'no label', 'INTPTLAT': 'no label', 'INTPTLON': 'no label', '2010 Hispanic or latino_HispanicsLatinos': 'no label', '2010 Hispanic or latino_Formatted_GEO': 'no label', });
+lyr_place_alleghenycounty_1.set('fieldLabels', {'full_id': 'no label', 'osm_id': 'no label', 'osm_type': 'no label', 'place': 'no label', 'cycleway': 'no label', 'surveillance:zone': 'no label', 'camera:type': 'no label', 'surveillance:type': 'no label', 'surveillance': 'no label', 'man_made': 'no label', 'camera:mount': 'no label', 'public_transport': 'no label', 'operator': 'no label', 'network': 'no label', 'bus': 'no label', 'gnis:county_id': 'no label', 'ford': 'no label', 'is_in:state': 'no label', 'is_in:county': 'no label', 'is_in:country': 'no label', 'traffic_signals:vibration': 'no label', 'button_operated': 'no label', 'website': 'no label', 'waterway': 'no label', 'ref:fra_crossing': 'no label', 'crossing:barrier': 'no label', 'crossing_ref': 'no label', 'noref': 'no label', 'noexit': 'no label', 'railway': 'no label', 'access:delivery': 'no label', 'motor_vehicle': 'no label', 'foot': 'no label', 'bicycle': 'no label', 'barrier': 'no label', 'ref': 'no label', 'old_ref': 'no label', 'is_in:municipality': 'no label', 'addr:municipality': 'no label', 'addr:state': 'no label', 'addr:postcode': 'no label', 'addr:city': 'no label', 'official_name': 'no label', 'alt_name': 'no label', 'source:old_name': 'no label', 'old_name': 'no label', 'gnis:feature_id': 'no label', 'is_in': 'no label', 'import_uuid': 'no label', 'gnis:id': 'no label', 'gnis:ST_num': 'no label', 'gnis:ST_alpha': 'no label', 'gnis:County_num': 'no label', 'gnis:County': 'no label', 'gnis:Class': 'no label', 'ele': 'no label', 'census:population': 'no label', 'direction': 'no label', 'traffic_signals:sound': 'no label', 'traffic_signals': 'no label', 'tactile_paving': 'no label', 'crossing:island': 'no label', 'odbl': 'no label', 'traffic_signals:direction': 'no label', 'crossing': 'no label', 'highway': 'no label', 'wikipedia': 'no label', 'wikidata': 'no label', 'source:name:oc': 'no label', 'short_name': 'no label', 'population': 'no label', 'name:ru': 'no label', 'name:pdc': 'no label', 'name:oc': 'no label', 'name:he': 'no label', 'name:en': 'no label', 'name': 'no label', });
+lyr_place_alleghenycounty_1.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
